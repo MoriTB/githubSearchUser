@@ -31,7 +31,7 @@ async function getUser() {
             console.log(resp.body);
             document.querySelector('#name-id').innerHTML="user not found.";
             document.querySelector('#bio-info').innerHTML="please try again."
-            document.querySelector('#avatar-img').src = "no-exist.png"
+            document.querySelector('#avatar-img').src = "./image/no-exist.png"
 
         }
         else{
@@ -130,7 +130,7 @@ async function localStorage1(){
             if (resp.status !=200){
                 document.querySelector('#name-id').innerHTML="user not found.";
                 document.querySelector('#bio-info').innerHTML="please try again."
-                document.querySelector('#avatar-img').src = "no-exist.png"
+                document.querySelector('#avatar-img').src = "./image/no-exist.png"
     
             }
             else{
@@ -199,7 +199,7 @@ async function localStorage1(){
                     document.getElementById('avatar-img').src = JSON.parse(respdata_local).avatar_url;
                 }
                 if (JSON.parse(respdata_local).avatar_url==null){
-                    document.getElementById('avatar-img').src ="./image/no-exist.png";    
+                    document.getElementById('avatar-img').src ="./image/avatar-img.png";    
                 }
                 if (JSON.parse(respdata_local).public_repos != null){
                     document.getElementById('total-repo').innerHTML = "total repo : "+JSON.parse(respdata_local).public_repos;
