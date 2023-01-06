@@ -1,0 +1,443 @@
+*{  /* it allow us to have same bording box and include all the page displayed. */
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* it include the whole page info */
+.full-container{
+    background-image: url("./image/background-image.jpeg");
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+    
+
+}
+/* it was used to created animation that it didnt work out properly so it defines 
+    the needed block to show info and user getter and etc... */
+.full-container .back-info-container{
+    position: relative;
+    background-color: hsl(0,0%,70%,.1);
+    box-shadow: 0px 0px 10px 0px hsl(0,0%,99%,.4);
+    padding:10px 10px;
+    margin: 10px 10px;
+    /* defining the size as default and when we expand or lower the browser window.*/
+    width :600px;
+    height: 400px;
+    max-width: 800px;
+    max-height: 400px;
+    border-radius:20px;
+    /* fix the gap between the two inherited class */
+    margin-right: 39%;
+    margin-bottom: 3%;
+    display: flex;
+    overflow: hidden;
+
+}
+/* to specify generilzed parameters about the container that hold information that we want. */
+.full-container .info-container{
+    position: absolute;
+    border-radius:20px;
+    z-index: 1;
+    inset: 0px;
+    
+
+
+    
+}
+/* it was used to make this moving animation that for some reason wasnt working properly??? 
+    it would give the box a moving led as shadow . 
+.info-container::before
+{
+    content: ' ';
+    position:absolute;
+    top:-50%;
+    left: -50%;
+    width: 600px;
+    height: 400px;
+    background:linear-gradient(0deg,transparent,blue,white) ;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+
+}
+.info-container::after
+{
+    content: ' ';
+    position:absolute;
+    top:-50%;
+    left: -50%;
+    width: 600px;
+    height: 400px;
+    background:linear-gradient(0deg,transparent,blue,white) ;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+   
+
+}
+*/
+/* define parameter for the big plot of the right side that hold info such as name, bio ,repo , last repo */
+.info-container .big-info{
+    position: absolute;
+    top: 2%;
+    left: 30%;
+    width: 500px;
+    height: 300px;
+    max-width: 600px;
+    max-height: 400px;
+    padding: 10px 40px;
+    
+    
+}
+/* define the core parameter for the left side of the information box that include follower,following,avatar and etc... */
+.little-info{
+    margin-top: 3%;
+    position: relative;
+    gap: 7px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: small;
+    
+}
+
+/* setting up the login container  ( defining the core value that needs to look and have good shape and size */
+.full-container .login-container{
+    position: absolute;
+    background-color: hsl(0,0%,70%,.1);
+    box-shadow: 0px 0px 10px 0px hsl(0,0%,99%,.4);
+    padding:40px 15px;
+    /* defining the size as default and when we expand or lower the browser window.*/
+    width :290px;
+    height: 250px;
+    max-width: 300px;
+    border-radius:20px;
+    overflow: hidden;
+    margin-left: 40%;
+    margin-bottom: 3%;
+    
+    
+}
+
+
+
+
+
+/* for the search that has been written on top of the login container */
+.login-title{
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+    color: whitesmoke;
+
+}
+/* setting the input form in login container that get info and has span on top of the input */
+.input-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+    gap: 10px;
+    /* goes the login upper */
+    margin-top: 40px;
+}
+/* how to show the the little pieces in the login container that is related to input and how to allign them correctly. */
+.input-class{
+    display: flex;
+    flex-direction: column;
+    gap:7px;
+}
+/* setting the information that would be displayed in a certain order */
+.input-class input{    
+    border-radius:5px;
+    padding: 0.15em;
+    font-size: 1.25rem;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: hsl(0,0%,100%,.1);
+    border:none;
+    outline: none;
+    color: whitesmoke;
+    font-weight: lighter;
+}
+/* to make the button have hover effect
+    and the 3d look and
+    making it response to the space left to change according to the space has
+    and the effect as background and the clickable effect implemented within. */
+.search-button{
+    width: 40%;
+    margin-left:20%;
+    display: flex;
+    justify-content: center;
+    background-color: hsl(0,0%,100%,.3);
+    border: 1px solid hsl(hsl(0,0%,100%));
+    border-radius: .25em;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: hsl(0,0%,0%,.6);
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-shadow: hsl(0,0%,100%,.3) 4px 4px 0 0,#000 4px 4px 0 1px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    overflow: visible;
+    padding: 10px 10%;
+    text-align: center;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: absolute; 
+}
+/* to make some adjusment to sign up link
+     and the hovering effect
+      and the space and alligning system implemented */
+.links{
+    display: flex;
+    justify-content:flex-end;
+    margin-bottom: 0px;
+}
+.links a{
+    color: whitesmoke;
+    margin: 10px 0px;
+    font-size:  0.75em;
+    text-decoration: none;
+}
+.links a:hover{
+    color: hsl(0,0%,60%);
+}
+/* input form in a valid or focus part should move from within the input form to upper side */
+.input-form input:valid ~ .username-msg,
+.input-form input:focus  ~ .username-msg{
+    color:rgba(249, 244, 244, 0.917); 
+    transform: translateY(-25px);
+    font-size: 0.75em;
+
+}
+
+.input-class input:focus{
+    box-shadow: 0 0 0 1px hsl(0,0%,95%,.5);
+    outline: none;
+} /* it was meant to show if the user exist with green color 
+    and if the user doesnt exit with red color 
+    but because we change it to disappear after search its not functional according to design and implemention.*/
+.input-class.correct input{
+    box-shadow: 0 0 0 1px hsl(100,60%,50%,.5);
+}
+.input-class.error input{
+    box-shadow: 0 0 0 1px hsl(0,60%,50%,.5);
+}
+.input-class .msg{
+    display: none;
+    font-size: 0.75rem;
+    color:hsl(100,60%,60%);;
+    margin: 0%;
+    padding-bottom: 0%;
+    font-weight: 400;
+}
+/* same story told as above we havent deleted this to actually
+     show how much work has been put into this and how many models
+     and how many ways to make it look clean and smooth was implemented.
+    */
+.input-class.correct .msg{
+    display: block;
+}
+.input-class.error .msg{
+    display: none;
+    
+}
+.input-class.error .msg input{
+    box-shadow: 0 0 0 1px hsl(0,60%,50%,.5);
+}
+.input-class.correct .msg input{
+    box-shadow: 0 0 0 1px hsl(100,60%,50%);
+}
+/* to place the message above the username field that get inputs and setting it according 
+    look like smaller section that describe what the input field is for */
+.input-class .username-msg{
+    position: absolute;
+    left: auto;
+    padding: 5px 5px 10px;
+    font-size: 1em;
+    color: rgba(241, 236, 236, 0.514);
+    transition: 0.5s;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    
+
+}
+/* it is used for hover in search button to change the color */
+.search-button:hover{
+    background-color: hsl(0,0%,90%,.8);
+}
+/* it is used when focus and hovering happens in input field it change color to look
+    cleaner */
+.input-class input:hover,
+.input-class input:focus{
+    background-color: hsl(0,0%,88%,0.3);
+}
+/* to make this 3d look in the button */
+.search-button:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+/* to make this 3d look in button and it would look clickable 
+    it satisfy the user the animation used to look the press in the button */
+.search-button:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+/* to make and set avatar profile round and enough size and the place it needs to be */
+.info-container .avatar-profile{
+    position: relative;
+    margin-top: 4%;
+    margin-left: 7%;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: hsl(0,0%,70%,0.4);
+    border-spacing: 0em;
+    box-shadow: 0px 0px 10px 1px hsl(0,0%,100%,.3);
+    padding: 5px;
+    
+}
+/* to make adjusment to follower section that would describe the followers of user */
+#followers{
+    position: relative; 
+    color: rgba(219, 219, 219, 0.979);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: small;
+    padding:20px
+}
+
+/* to make adjusment to follower section that would describe the following of user */
+#following{
+    position: relative; 
+    color: rgba(219, 219, 219, 0.979);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: 1.02em;
+    padding: 20px;
+}
+/* to make adjusment to location section that would describe the location of user */
+#location{
+    display: block;
+    position: relative; 
+    color: rgba(219, 219, 219, 0.979);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: medium;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 9px;
+}
+/* to make adjusment to company section that would describe the company of user */
+#company{
+    display: block;
+    position: relative;
+    position: relative; 
+    color: rgba(219, 219, 219, 0.979);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: medium;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 9px;
+}
+/* to make adjusment to blog section that would describe the blog of user
+    and it should be a bit larger than others with more space between them
+    to have more retro looks in general over view. */
+#blog{
+    display: block;
+    position: relative;
+    position: relative; 
+    color: rgba(219, 219, 219, 0.979);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: medium;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 9px;
+}
+/* to make adjusment to name of user section that would describe the name of user in big-info section */
+#name-id{
+    width: auto;
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.979);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:meduim;
+    padding: 3% 1fr;
+    margin-top: 10px;
+
+}
+/* to make adjusment to total-repo section that would describe the total repositories of user */
+#total-repo{
+    position: relative; 
+    color: rgba(219, 219, 219, 0.979);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: 0.75em;
+    padding:40px 10px;
+    gap: 2px;
+}
+/* to make adjusment to popular section that would describe the pinned repo/ last repo of user */
+#last-repo{
+    position: relative; 
+    color: rgba(220, 220, 220, 0.900);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: 0.75em;
+    padding: 40px 60px;
+    gap: 2px;
+}
+/* to make adjusment to the name of bio in bio section  */
+#bio{
+    display:block;
+    position: relative; 
+    color: rgba(220, 220, 220, 0.900);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: 1.02em;
+    padding: 0px 10px;
+    padding-top: 10px; 
+
+}
+/* to show bio-info as smaller font in the bio section defined in the above.*/
+#bio-info{
+    white-space:pre-line;
+    display:block;
+    position: relative; 
+    color: rgba(220, 220, 220, 0.900);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight:lighter;
+    font-size: 0.75em;
+    padding: 0px 15px;
+    gap: 2px;
+}
+/* the implemention the animation needed in the information container 
+    that has been commented 
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+}
+*/
+
+
