@@ -1,5 +1,5 @@
 # quick access to use.
-quick access to the midterm project through here :>
+quick access to the project through here :>
 https://moritb.github.io/githubSearchUser/
 # Github User Search
 Github User Search is a web application that allows users to search for Github users and view their profile information, including their name, bio, location, company, number of followers, number of repositories, and their most popular repository. The application also displays the user's avatar.
